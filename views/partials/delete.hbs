@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Invoice</title>
+  <link rel="stylesheet" href="/mystyles.css">
+</head>
+
+<body>
+  <h1>Delete Invoice</h1>
+
+  <p>Are you sure you want to delete the following invoice?</p>
+  <ul>
+    <li><strong>Invoice Number:</strong> {{invoice.InvoiceNo}}</li>
+    <li><strong>Manufacturer:</strong> {{invoice.Manufacturer}}</li>
+    <!-- Add other relevant fields as needed -->
+  </ul>
+
+  <form action="/deleteInvoice/{{invoice._id}}" method="post">
+    <button type="submit">Confirm Delete</button>
+  </form>
+
+  <a href="/allInvoices">Cancel</a>
+</body>
+
+</html>

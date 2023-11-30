@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High Sales Invoices</title>
+</head>
+
+<body>
+  <h1>High Sales Invoices</h1>
+<form action="/highSalesInvoices.hbs" method="get"></form>
+  {{#if invoices.length}}
+    <table>
+      <thead>
+        <tr>
+          <th>InvoiceNo</th>
+          <th>Manufacturer</th>
+          <th>Sales_in_thousands</th>
+          <!-- Add other relevant fields as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        {{#each invoices}}
+          <tr>
+            <td>{{InvoiceNo}}</td>
+            <td>{{Manufacturer}}</td>
+            <td>{{Sales_in_thousands}}</td>
+            <!-- Add other relevant fields as needed -->
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p>No high sales invoices found.</p>
+  {{/if}}
+
+  <a href="/">Back to Home</a>
+</body>
+
+</html>

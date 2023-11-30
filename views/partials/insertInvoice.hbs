@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insert Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 50%;
+      margin: 20px auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Insert New Invoice</h1>
+
+  <form action="/insertInvoice" method="post">
+   <h1>Insert New Invoice</h1>
+     {{#each insert}}
+  <form action="/insertInvoice" method="post">
+    <label for="InvoiceNo">Invoice Number:</label>
+    <input type="text" id="InvoiceNo" name="InvoiceNo" value="{{InvoiceNo}}" readonly>
+
+    <label for="image">Image URL:</label>
+    <input type="text" id="image" name="image" value="{{image}}">
+
+    <label for="Manufacturer">Manufacturer:</label>
+    <input type="text" id="Manufacturer" name="Manufacturer" value="{{Manufacturer}}">
+
+    <label for="class">Class:</label>
+    <input type="text" id="class" name="class" value="{{class}}">
+
+    <label for="Sales_in_thousands">Sales (in thousands):</label>
+    <input type="number" id="Sales_in_thousands" name="Sales_in_thousands" value="{{Sales_in_thousands}}">
+
+    <button type="submit">Insert Invoice</button>
+  </form>
+ {{/each}}
+  <a href="/allInvoices">View All Invoices</a>
+</body>
+
+</html>

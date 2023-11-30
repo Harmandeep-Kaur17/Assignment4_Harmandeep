@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-validator": "^7.0.1",
+    "mongoose": "^8.0.1"
+  },
+  "name": "asn4-mongo-harmandeepkaur",
+  "version": "1.0.0",
+  "main": "async-await.js",
+  "scripts": {
+    "start":"node carsales.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harman",
+  "license": "ISC",
+  "description": ""
+}
